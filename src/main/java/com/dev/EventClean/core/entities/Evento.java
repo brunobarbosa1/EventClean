@@ -15,6 +15,8 @@ public class Evento {
     private Integer capacidade;
     private String organizador;
     private TipoEvento tipo;
+    private LocalDateTime criado_em;
+    private LocalDateTime atualizado_em;
 
     public Evento(Long id,
                   String nome,
@@ -25,7 +27,9 @@ public class Evento {
                   String local,
                   Integer capacidade,
                   String organizador,
-                  TipoEvento tipo) {
+                  TipoEvento tipo,
+                  LocalDateTime criado_em,
+                  LocalDateTime atualizado_em) {
 
         this.id = id;
         this.nome = nome;
@@ -37,6 +41,8 @@ public class Evento {
         this.capacidade = capacidade;
         this.organizador = organizador;
         this.tipo = tipo;
+        this.criado_em = criado_em;
+        this.atualizado_em = atualizado_em;
     }
 
 
@@ -119,4 +125,21 @@ public class Evento {
     public void setTipo(TipoEvento tipo) {
         this.tipo = tipo;
     }
+
+    public LocalDateTime getCriado_em() {
+        return criado_em;
+    }
+
+    public void setCriado_em(LocalDateTime criado_em) {
+        this.criado_em = criado_em;
+    }
+
+    public LocalDateTime getAtualizado_em() {
+        return atualizado_em;
+    }
+
+    public void setAtualizado_em(LocalDateTime atualizado_em) {
+        this.atualizado_em = atualizado_em;
+    }
+
 }
