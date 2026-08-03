@@ -6,11 +6,11 @@ import java.util.Optional;
 
 public interface EventoGateway {
 
-    Evento listarEventoPorId(Long id);
+    Optional<Evento> listarEventoPorId(Long id);
     Evento criarEvento(Evento evento);
     List<Evento> listarEventos();
-    Evento atualizarEvento(Long id, Evento evento);
-    void deletarEvento(Long id);
+    Evento atualizarEvento(Evento evento);
+    Optional<Evento> deletarEvento(Long id);
     Optional<Evento> buscarEventoPorIdentificador(String identificador);
 
 }
